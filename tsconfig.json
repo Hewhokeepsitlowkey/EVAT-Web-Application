@@ -1,3 +1,21 @@
 {
+<<<<<<< HEAD
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "jsx": "react-native",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["ESNext", "DOM"],
+    "allowJs": true
+  },
+  "include": ["*.ts", "*.tsx", "*.js"],
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
+}
+=======
   "extends": "@react-native/typescript-config/tsconfig.json"
 }
+>>>>>>> 915caf62d74450b4b508de73df4822c15ebf6d74
