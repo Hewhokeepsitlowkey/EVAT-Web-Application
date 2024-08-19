@@ -15,7 +15,7 @@ const FooterNavigation = () => {
 
       <TouchableOpacity style={styles.navItem} onPress={() => navigation.navigate('TripPlanner')}>
         <Icon name="clipboard-text-outline" size={25} color="#0000ff" />
-        <Text>Trip planner</Text>
+        <Text>Trip Planner</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={styles.navItem} onPress={() => navigation.navigate('Save')}>
@@ -39,11 +39,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     height: 60,
     borderTopWidth: 1,
-    borderTopColor: '#ddd'
+    borderTopColor: '#ddd',
   },
   navItem: {
-    alignItems: 'center'
-  }
+    alignItems: 'center',
+    paddingHorizontal: 15, // Increased horizontal padding
+    marginHorizontal: 18, // Increased horizontal margin
+  },
 });
 
 export default FooterNavigation;
