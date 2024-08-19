@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { SafeAreaView, StyleSheet, Text } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import FooterNavigation from './components/FooterNavigation';
 import MapScreen from './components/MapScreen';
 import TripPlannerScreen from './components/TripPlannerScreen';
@@ -10,17 +10,25 @@ import MeScreen from './components/MeScreen';
 
 const Stack = createNativeStackNavigator();
 
+const routes = [
+  { name: 'Map', component: MapScreen },
+  { name: 'TripPlanner', component: TripPlannerScreen },
+  { name: 'Save', component: SaveScreen },
+  { name: 'Me', component: MeScreen },
+];
+
 const App = () => {
   return (
     <NavigationContainer>
       <SafeAreaView style={styles.container}>
-        <Text style={styles.fancyText}>Happy Coding EVAT legends</Text>
-        <Stack.Navigator initialRouteName="Home">
-          <Stack.Screen name="Map" component={MapScreen} />
-          <Stack.Screen name="TripPlanner" component={TripPlannerScreen} />
-          <Stack.Screen name="Save" component={SaveScreen} />
-          <Stack.Screen name="Me" component={MeScreen} />
-        </Stack.Navigator>
+        <Text style={styles.fancyText}>Happy Coding EVAT Legends</Text>
+        <View style={styles.navigatorContainer}>
+          <Stack.Navigator initialRouteName="Map">
+            {routes.map((route, index) => (
+              <Stack.Screen key={index} name={route.name} component={route.component} />
+            ))}
+          </Stack.Navigator>
+        </View>
         <FooterNavigation />
       </SafeAreaView>
     </NavigationContainer>
@@ -30,18 +38,18 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'flex-end',
-    backgroundColor: '#f0f8ff',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   fancyText: {
-    fontSize: 24,
+    fontSize: 20,
     fontWeight: 'bold',
-    color: '#4b0082',
-    textShadowColor: '#ff69b4',
-    textShadowOffset: { width: 2, height: 2 },
-    textShadowRadius: 3,
-    textAlign: 'center',
-    margin: 20,
+    marginBottom: 20, // Add margin to separate text from the navigator
+  },
+  navigatorContainer: {
+    flex: 1,
+    width: '100%',
+    paddingHorizontal: 10, // Add padding to the navigator container
   },
 });
 
