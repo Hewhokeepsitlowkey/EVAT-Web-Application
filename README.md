@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # EVAT Mobile Application
 
@@ -227,6 +228,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  768657f (Readme.md)
 =======
+=======
+>>>>>>> 0e2beb6 (Added API to the Homepage)
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started

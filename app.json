@@ -1,4 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "EVAT",
   "displayName": "EVAT"
+=======
+  "name": "myRN",
+  "displayName": "myRN"
+>>>>>>> 0e2beb6 (Added API to the Homepage)
 }

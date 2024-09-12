@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
+<<<<<<< HEAD
 
     <application
       android:name=".MainApplication"
@@ -10,6 +11,22 @@
       android:allowBackup="false"
       android:theme="@style/AppTheme">
       <activity
+=======
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<application
+    android:name=".MainApplication"
+    android:label="@string/app_name"
+    android:icon="@mipmap/ic_launcher"
+    android:roundIcon="@mipmap/ic_launcher_round"
+    android:allowBackup="false"
+    android:theme="@style/AppTheme"
+    android:supportsRtl="true">
+    <meta-data
+        android:name="com.google.android.geo.API_KEY"
+        android:value="AIzaSyDbfaYzyw__K8paspxDS6c7Pw5VP6q_R48"/>
+    <activity
+>>>>>>> 0e2beb6 (Added API to the Homepage)
         android:name=".MainActivity"
         android:label="@string/app_name"
         android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
@@ -20,6 +37,11 @@
             <action android:name="android.intent.action.MAIN" />
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
+<<<<<<< HEAD
       </activity>
     </application>
+=======
+    </activity>
+</application>
+>>>>>>> 0e2beb6 (Added API to the Homepage)
 </manifest>
